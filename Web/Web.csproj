@@ -1,0 +1,1379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96C0C548-0FB3-4FEF-AA54-504535213724}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="URLRewriter, Version=1.0.1495.18710, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aspx\Failure.htm" />
+    <Content Include="Aspx\Success.htm" />
+    <Content Include="bin\URLRewriter.dll" />
+    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="CustomerManage\CustomerEdit.aspx" />
+    <Content Include="CustomerManage\CustomerList.aspx" />
+    <Content Include="CustomerManage\EmployeeEdit.aspx" />
+    <Content Include="CustomerManage\EmployeeList.aspx" />
+    <Content Include="CustomerManage\index.aspx" />
+    <Content Include="CustomerManage\PaperAuthorManage.aspx" />
+    <Content Include="Images\01.jpg" />
+    <Content Include="Images\admin_01.gif" />
+    <Content Include="Images\admin_02.gif" />
+    <Content Include="Images\admin_03.gif" />
+    <Content Include="Images\admin_04.gif" />
+    <Content Include="Images\admin_05.gif" />
+    <Content Include="Images\Loading.gif" />
+    <Content Include="Images\setup_01.gif" />
+    <Content Include="Images\setup_02.gif" />
+    <Content Include="Images\setup_03.gif" />
+    <Content Include="Images\setup_04.gif" />
+    <Content Include="Images\setup_05.gif" />
+    <Content Include="img\company_false.png" />
+    <Content Include="img\company_true.png" />
+    <Content Include="JS\bootstrap\css\bootstrap.min.css" />
+    <Content Include="JS\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="JS\bootstrap\js\bootlint.js" />
+    <Content Include="JS\bootstrap\js\bootstrap.js" />
+    <Content Include="JS\bootstrap\js\bootstrap.min.js" />
+    <Content Include="JS\bootstrap\js\html5shiv.min.js" />
+    <Content Include="JS\bootstrap\js\jquery-1.11.3.js" />
+    <Content Include="JS\bootstrap\js\respond.min.js" />
+    <Content Include="JS\Company_Common.js" />
+    <Content Include="JS\jquery-1.11.2.min.js" />
+    <Content Include="JS\jquery-easyui\jquery-1.11.2.min.js" />
+    <Content Include="JS\jquery-easyui\demo-mobile\accordion\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\accordion\header.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\accordion\_content.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\animation\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\animation\fade.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\animation\pop.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\animation\slide.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\badge\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\badge\button.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\badge\list.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\badge\tabs.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\button\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\button\group.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\button\style.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\button\switch.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\datagrid\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\datagrid\rowediting.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\datalist\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\datalist\group.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\datalist\selection.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\dialog\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\dialog\message.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\form\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\images\login1.jpg" />
+    <Content Include="JS\jquery-easyui\demo-mobile\images\modem.png" />
+    <Content Include="JS\jquery-easyui\demo-mobile\images\more.png" />
+    <Content Include="JS\jquery-easyui\demo-mobile\images\pda.png" />
+    <Content Include="JS\jquery-easyui\demo-mobile\images\scanner.png" />
+    <Content Include="JS\jquery-easyui\demo-mobile\images\tablet.png" />
+    <Content Include="JS\jquery-easyui\demo-mobile\input\numberspinner.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\input\textbox.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\layout\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\menu\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\menu\menubar.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\panel\ajax.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\panel\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\panel\nav.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\panel\_content.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\simplelist\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\simplelist\button.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\simplelist\group.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\simplelist\image.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\simplelist\link.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\tabs\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\tabs\nav.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\tabs\pill.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\toolbar\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\toolbar\button.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\toolbar\menu.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\tree\basic.html" />
+    <Content Include="JS\jquery-easyui\demo-mobile\tree\dnd.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\ajax.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\expandable.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\multiple.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\tools.html" />
+    <Content Include="JS\jquery-easyui\demo\accordion\_content.html" />
+    <Content Include="JS\jquery-easyui\demo\calendar\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\calendar\custom.html" />
+    <Content Include="JS\jquery-easyui\demo\calendar\disabledate.html" />
+    <Content Include="JS\jquery-easyui\demo\calendar\firstday.html" />
+    <Content Include="JS\jquery-easyui\demo\calendar\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\customformat.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\dynamicdata.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\group.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\icons.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\multiline.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\multiple.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\navigation.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\remotedata.html" />
+    <Content Include="JS\jquery-easyui\demo\combobox\remotejsonp.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\initvalue.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\multiple.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\navigation.html" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\setvalue.html" />
+    <Content Include="JS\jquery-easyui\demo\combotree\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\combotree\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\combotree\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\combotree\initvalue.html" />
+    <Content Include="JS\jquery-easyui\demo\combotree\multiple.html" />
+    <Content Include="JS\jquery-easyui\demo\combo\animation.html" />
+    <Content Include="JS\jquery-easyui\demo\combo\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\aligncolumns.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\cacheeditor.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\cellediting.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\cellstyle.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\checkbox.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\clientpagination.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\columngroup.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\complextoolbar.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\contextmenu.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\custompager.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\footer.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\formatcolumns.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\frozencolumns.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\frozenrows.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\mergecells.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\multisorting.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\rowborder.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\rowediting.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\rowstyle.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\selection.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\simpletoolbar.html" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\transform.html" />
+    <Content Include="JS\jquery-easyui\demo\datalist\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\datalist\checkbox.html" />
+    <Content Include="JS\jquery-easyui\demo\datalist\group.html" />
+    <Content Include="JS\jquery-easyui\demo\datalist\multiselect.html" />
+    <Content Include="JS\jquery-easyui\demo\datalist\remotedata.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\buttons.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\clone.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\dateformat.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\events.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\restrict.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\sharedcalendar.html" />
+    <Content Include="JS\jquery-easyui\demo\datebox\validate.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimebox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimebox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimebox\initvalue.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimebox\showseconds.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimespinner\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimespinner\clearicon.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimespinner\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\datetimespinner\format.html" />
+    <Content Include="JS\jquery-easyui\demo\demo.css" />
+    <Content Include="JS\jquery-easyui\demo\dialog\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\dialog\complextoolbar.html" />
+    <Content Include="JS\jquery-easyui\demo\dialog\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\dialog\toolbarbuttons.html" />
+    <Content Include="JS\jquery-easyui\demo\draggable\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\draggable\constrain.html" />
+    <Content Include="JS\jquery-easyui\demo\draggable\snap.html" />
+    <Content Include="JS\jquery-easyui\demo\droppable\accept.html" />
+    <Content Include="JS\jquery-easyui\demo\droppable\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\droppable\sort.html" />
+    <Content Include="JS\jquery-easyui\demo\easyloader\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\filebox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\filebox\buttonalign.html" />
+    <Content Include="JS\jquery-easyui\demo\filebox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\form\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\form\load.html" />
+    <Content Include="JS\jquery-easyui\demo\form\validateonsubmit.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\addremove.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\autoheight.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\collapsetitle.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\complex.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\customcollapsetitle.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\full.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\nestedlayout.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\nocollapsible.html" />
+    <Content Include="JS\jquery-easyui\demo\layout\_content.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\group.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\iconalign.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\plain.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\size.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\style.html" />
+    <Content Include="JS\jquery-easyui\demo\linkbutton\toggle.html" />
+    <Content Include="JS\jquery-easyui\demo\menubutton\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\menubutton\alignment.html" />
+    <Content Include="JS\jquery-easyui\demo\menubutton\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\menubutton\nav.html" />
+    <Content Include="JS\jquery-easyui\demo\menu\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\menu\customitem.html" />
+    <Content Include="JS\jquery-easyui\demo\menu\events.html" />
+    <Content Include="JS\jquery-easyui\demo\menu\inline.html" />
+    <Content Include="JS\jquery-easyui\demo\menu\nav.html" />
+    <Content Include="JS\jquery-easyui\demo\messager\alert.html" />
+    <Content Include="JS\jquery-easyui\demo\messager\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\messager\interactive.html" />
+    <Content Include="JS\jquery-easyui\demo\messager\position.html" />
+    <Content Include="JS\jquery-easyui\demo\numberbox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\numberbox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\numberbox\format.html" />
+    <Content Include="JS\jquery-easyui\demo\numberbox\range.html" />
+    <Content Include="JS\jquery-easyui\demo\numberspinner\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\numberspinner\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\numberspinner\increment.html" />
+    <Content Include="JS\jquery-easyui\demo\numberspinner\range.html" />
+    <Content Include="JS\jquery-easyui\demo\pagination\attaching.html" />
+    <Content Include="JS\jquery-easyui\demo\pagination\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\pagination\custombuttons.html" />
+    <Content Include="JS\jquery-easyui\demo\pagination\layout.html" />
+    <Content Include="JS\jquery-easyui\demo\pagination\links.html" />
+    <Content Include="JS\jquery-easyui\demo\pagination\simple.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\customtools.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\footer.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\loadcontent.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\nestedpanel.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\paneltools.html" />
+    <Content Include="JS\jquery-easyui\demo\panel\_content.html" />
+    <Content Include="JS\jquery-easyui\demo\progressbar\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\progressbar\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\propertygrid\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\propertygrid\customcolumns.html" />
+    <Content Include="JS\jquery-easyui\demo\propertygrid\groupformat.html" />
+    <Content Include="JS\jquery-easyui\demo\resizable\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\searchbox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\searchbox\category.html" />
+    <Content Include="JS\jquery-easyui\demo\searchbox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\formattip.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\nonlinear.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\range.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\rule.html" />
+    <Content Include="JS\jquery-easyui\demo\slider\vertical.html" />
+    <Content Include="JS\jquery-easyui\demo\splitbutton\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\splitbutton\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\switchbutton\action.html" />
+    <Content Include="JS\jquery-easyui\demo\switchbutton\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\autoheight.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\dropdown.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\fixedwidth.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\hover.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\images\modem.png" />
+    <Content Include="JS\jquery-easyui\demo\tabs\images\pda.png" />
+    <Content Include="JS\jquery-easyui\demo\tabs\images\scanner.png" />
+    <Content Include="JS\jquery-easyui\demo\tabs\images\tablet.png" />
+    <Content Include="JS\jquery-easyui\demo\tabs\nestedtabs.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\striptools.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\style.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\tabimage.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\tabposition.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\tabstools.html" />
+    <Content Include="JS\jquery-easyui\demo\tabs\_content.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\button.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\clearicon.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\custom.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\icons.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\multiline.html" />
+    <Content Include="JS\jquery-easyui\demo\textbox\size.html" />
+    <Content Include="JS\jquery-easyui\demo\timespinner\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\timespinner\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\timespinner\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\timespinner\range.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\ajax.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\customcontent.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\customstyle.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\position.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\toolbar.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\tooltipdialog.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\_content.html" />
+    <Content Include="JS\jquery-easyui\demo\tooltip\_dialog.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\clientpagination.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\contextmenu.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\editable.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\footer.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\lines.html" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\reports.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\actions.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\animation.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\checkbox.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\contextmenu.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\dnd.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\editable.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\formatting.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\icons.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\lazyload.html" />
+    <Content Include="JS\jquery-easyui\demo\tree\lines.html" />
+    <Content Include="JS\jquery-easyui\demo\validatebox\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\validatebox\customtooltip.html" />
+    <Content Include="JS\jquery-easyui\demo\validatebox\validateonblur.html" />
+    <Content Include="JS\jquery-easyui\demo\window\basic.html" />
+    <Content Include="JS\jquery-easyui\demo\window\customtools.html" />
+    <Content Include="JS\jquery-easyui\demo\window\fluid.html" />
+    <Content Include="JS\jquery-easyui\demo\window\footer.html" />
+    <Content Include="JS\jquery-easyui\demo\window\inlinewindow.html" />
+    <Content Include="JS\jquery-easyui\demo\window\modalwindow.html" />
+    <Content Include="JS\jquery-easyui\demo\window\windowlayout.html" />
+    <Content Include="JS\jquery-easyui\jquery.easyui.min.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-af.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-am.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-ar.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-bg.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-ca.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-cs.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-cz.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-da.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-de.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-el.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-en.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-es.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-fr.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-it.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-jp.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-nl.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-pl.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-pt_BR.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-ru.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-sv_SE.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-tr.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="JS\jquery-easyui\locale\easyui-lang-zh_TW.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.accordion.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.calendar.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.combo.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.combobox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.combogrid.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.combotree.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.datagrid.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.datalist.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.datebox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.datetimebox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.datetimespinner.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.dialog.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.draggable.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.droppable.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.filebox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.form.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.layout.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.linkbutton.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.menu.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.menubutton.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.messager.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.mobile.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.numberbox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.numberspinner.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.pagination.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.panel.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.parser.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.progressbar.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.propertygrid.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.resizable.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.searchbox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.slider.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.spinner.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.splitbutton.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.switchbutton.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.tabs.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.textbox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.timespinner.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.tooltip.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.tree.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.treegrid.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.validatebox.js" />
+    <Content Include="JS\jquery-easyui\plugins\jquery.window.js" />
+    <Content Include="JS\jquery-easyui\src\easyloader.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.accordion.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.calendar.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.combobox.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.datebox.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.draggable.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.droppable.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.form.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.linkbutton.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.menu.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.parser.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.progressbar.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.propertygrid.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.resizable.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.slider.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.tabs.js" />
+    <Content Include="JS\jquery-easyui\src\jquery.window.js" />
+    <Content Include="JS\jquery-easyui\themes\black\accordion.css" />
+    <Content Include="JS\jquery-easyui\themes\black\calendar.css" />
+    <Content Include="JS\jquery-easyui\themes\black\combo.css" />
+    <Content Include="JS\jquery-easyui\themes\black\combobox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\datagrid.css" />
+    <Content Include="JS\jquery-easyui\themes\black\datalist.css" />
+    <Content Include="JS\jquery-easyui\themes\black\datebox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\dialog.css" />
+    <Content Include="JS\jquery-easyui\themes\black\easyui.css" />
+    <Content Include="JS\jquery-easyui\themes\black\filebox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\images\accordion_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\blank.gif" />
+    <Content Include="JS\jquery-easyui\themes\black\images\calendar_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\combo_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\datagrid_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\datebox_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\layout_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\loading.gif" />
+    <Content Include="JS\jquery-easyui\themes\black\images\menu_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\messager_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\pagination_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\panel_tools.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\searchbox_button.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\slider_handle.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\spinner_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\tabs_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\tree_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\black\images\validatebox_warning.png" />
+    <Content Include="JS\jquery-easyui\themes\black\layout.css" />
+    <Content Include="JS\jquery-easyui\themes\black\linkbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\black\menu.css" />
+    <Content Include="JS\jquery-easyui\themes\black\menubutton.css" />
+    <Content Include="JS\jquery-easyui\themes\black\messager.css" />
+    <Content Include="JS\jquery-easyui\themes\black\numberbox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\pagination.css" />
+    <Content Include="JS\jquery-easyui\themes\black\panel.css" />
+    <Content Include="JS\jquery-easyui\themes\black\progressbar.css" />
+    <Content Include="JS\jquery-easyui\themes\black\propertygrid.css" />
+    <Content Include="JS\jquery-easyui\themes\black\searchbox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\slider.css" />
+    <Content Include="JS\jquery-easyui\themes\black\spinner.css" />
+    <Content Include="JS\jquery-easyui\themes\black\splitbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\black\switchbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\black\tabs.css" />
+    <Content Include="JS\jquery-easyui\themes\black\textbox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\tooltip.css" />
+    <Content Include="JS\jquery-easyui\themes\black\tree.css" />
+    <Content Include="JS\jquery-easyui\themes\black\validatebox.css" />
+    <Content Include="JS\jquery-easyui\themes\black\window.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\accordion.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\calendar.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\combo.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\combobox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\datalist.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\datebox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\dialog.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\easyui.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\filebox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\layout.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\menu.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\messager.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\numberbox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\pagination.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\panel.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\slider.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\spinner.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\switchbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\tabs.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\textbox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\tooltip.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\tree.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="JS\jquery-easyui\themes\bootstrap\window.css" />
+    <Content Include="JS\jquery-easyui\themes\color.css" />
+    <Content Include="JS\jquery-easyui\themes\default\accordion.css" />
+    <Content Include="JS\jquery-easyui\themes\default\calendar.css" />
+    <Content Include="JS\jquery-easyui\themes\default\combo.css" />
+    <Content Include="JS\jquery-easyui\themes\default\combobox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\datagrid.css" />
+    <Content Include="JS\jquery-easyui\themes\default\datalist.css" />
+    <Content Include="JS\jquery-easyui\themes\default\datebox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\dialog.css" />
+    <Content Include="JS\jquery-easyui\themes\default\easyui.css" />
+    <Content Include="JS\jquery-easyui\themes\default\filebox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\blank.gif" />
+    <Content Include="JS\jquery-easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\loading.gif" />
+    <Content Include="JS\jquery-easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\messager_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\panel_tools.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\slider_handle.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\tree_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="JS\jquery-easyui\themes\default\layout.css" />
+    <Content Include="JS\jquery-easyui\themes\default\linkbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\default\menu.css" />
+    <Content Include="JS\jquery-easyui\themes\default\menubutton.css" />
+    <Content Include="JS\jquery-easyui\themes\default\messager.css" />
+    <Content Include="JS\jquery-easyui\themes\default\numberbox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\pagination.css" />
+    <Content Include="JS\jquery-easyui\themes\default\panel.css" />
+    <Content Include="JS\jquery-easyui\themes\default\progressbar.css" />
+    <Content Include="JS\jquery-easyui\themes\default\propertygrid.css" />
+    <Content Include="JS\jquery-easyui\themes\default\searchbox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\slider.css" />
+    <Content Include="JS\jquery-easyui\themes\default\spinner.css" />
+    <Content Include="JS\jquery-easyui\themes\default\splitbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\default\switchbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\default\tabs.css" />
+    <Content Include="JS\jquery-easyui\themes\default\textbox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\tooltip.css" />
+    <Content Include="JS\jquery-easyui\themes\default\tree.css" />
+    <Content Include="JS\jquery-easyui\themes\default\validatebox.css" />
+    <Content Include="JS\jquery-easyui\themes\default\window.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\accordion.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\calendar.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\combo.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\combobox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\datagrid.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\datalist.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\datebox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\dialog.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\easyui.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\filebox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\blank.gif" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\combo_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\loading.gif" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\menu_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\messager_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\pagination_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\panel_tools.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\tabs_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\tree_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="JS\jquery-easyui\themes\gray\layout.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\linkbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\menu.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\menubutton.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\messager.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\numberbox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\pagination.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\panel.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\progressbar.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\propertygrid.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\searchbox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\slider.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\spinner.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\splitbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\switchbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\tabs.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\textbox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\tooltip.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\tree.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\validatebox.css" />
+    <Content Include="JS\jquery-easyui\themes\gray\window.css" />
+    <Content Include="JS\jquery-easyui\themes\icon.css" />
+    <Content Include="JS\jquery-easyui\themes\icons\back.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\blank.gif" />
+    <Content Include="JS\jquery-easyui\themes\icons\cancel.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\clear.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\cut.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\edit_add.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\edit_remove.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\filesave.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\filter.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\help.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\large_chart.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\large_clipart.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\large_picture.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\large_shapes.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\large_smartart.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\lock.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\man.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\mini_add.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\mini_edit.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\mini_refresh.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\more.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\no.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\ok.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\pencil.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\print.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\redo.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\reload.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\search.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\sum.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\tip.png" />
+    <Content Include="JS\jquery-easyui\themes\icons\undo.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\accordion.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\calendar.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\combo.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\combobox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\datagrid.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\datalist.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\datebox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\dialog.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\easyui.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\filebox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\blank.gif" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\combo_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\loading.gif" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\menu_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\messager_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\pagination_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\panel_tools.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\slider_handle.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\tabs_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\tree_icons.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="JS\jquery-easyui\themes\metro\layout.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\linkbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\menu.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\menubutton.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\messager.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\numberbox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\pagination.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\panel.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\progressbar.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\propertygrid.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\searchbox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\slider.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\spinner.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\splitbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\switchbutton.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\tabs.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\textbox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\tooltip.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\tree.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\validatebox.css" />
+    <Content Include="JS\jquery-easyui\themes\metro\window.css" />
+    <Content Include="JS\jquery-easyui\themes\mobile.css" />
+    <Content Include="JS\papercss.css" />
+    <Content Include="JS\subNavBox\css\zzsc.css" />
+    <Content Include="JS\subNavBox\images\jiantou.jpg" />
+    <Content Include="JS\subNavBox\images\jiantou1.jpg" />
+    <Content Include="PaperManagement\Paper1.aspx" />
+    <Content Include="PaperManagement\Paper1_admin.aspx" />
+    <Content Include="PaperManagement\Paper2.aspx" />
+    <Content Include="PaperManagement\Paper2_admin.aspx" />
+    <Content Include="PaperManagement\Paper3.aspx" />
+    <Content Include="PaperManagement\Paper3_admin.aspx" />
+    <Content Include="PaperManagement\WebForm1.aspx" />
+    <Content Include="PaperProduction\Add_test.aspx" />
+    <Content Include="Setup\Index.aspx" />
+    <Content Include="Setup\Setup1.aspx" />
+    <Content Include="Setup\Setup2.aspx" />
+    <Content Include="Setup\Setup3.aspx" />
+    <Content Include="Setup\Setup4.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Div_Mid_Left.aspx.cs">
+      <DependentUpon>Div_Mid_Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Div_Mid_Left.aspx.designer.cs">
+      <DependentUpon>Div_Mid_Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Div_Mid_Mid.aspx.cs">
+      <DependentUpon>Div_Mid_Mid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Div_Mid_Mid.aspx.designer.cs">
+      <DependentUpon>Div_Mid_Mid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Div_Mid_Right.aspx.cs">
+      <DependentUpon>Div_Mid_Right.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Div_Mid_Right.aspx.designer.cs">
+      <DependentUpon>Div_Mid_Right.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Exchange.aspx.cs">
+      <DependentUpon>Exchange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Exchange.aspx.designer.cs">
+      <DependentUpon>Exchange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Jump.aspx.cs">
+      <DependentUpon>Jump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Jump.aspx.designer.cs">
+      <DependentUpon>Jump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\CustomerEdit.aspx.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\CustomerEdit.aspx.designer.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\EmployeeEdit.aspx.cs">
+      <DependentUpon>EmployeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\EmployeeEdit.aspx.designer.cs">
+      <DependentUpon>EmployeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManage\PaperAuthorManage.aspx.cs">
+      <DependentUpon>PaperAuthorManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManage\PaperAuthorManage.aspx.designer.cs">
+      <DependentUpon>PaperAuthorManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\Radio.aspx.cs">
+      <DependentUpon>Radio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\Radio.aspx.designer.cs">
+      <DependentUpon>Radio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\RadioValue.aspx.cs">
+      <DependentUpon>RadioValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\RadioValue.aspx.designer.cs">
+      <DependentUpon>RadioValue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\RedioMore.aspx.cs">
+      <DependentUpon>RedioMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\RedioMore.aspx.designer.cs">
+      <DependentUpon>RedioMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\TMS_Add.aspx.cs">
+      <DependentUpon>TMS_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\TMS_Add.aspx.designer.cs">
+      <DependentUpon>TMS_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\TMS_Details.aspx.cs">
+      <DependentUpon>TMS_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\TMS_Details.aspx.designer.cs">
+      <DependentUpon>TMS_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\TMS_List.aspx.cs">
+      <DependentUpon>TMS_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\TMS_List.aspx.designer.cs">
+      <DependentUpon>TMS_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBankManagement\T_F.aspx.cs">
+      <DependentUpon>T_F.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBankManagement\T_F.aspx.designer.cs">
+      <DependentUpon>T_F.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Right.Master.cs">
+      <DependentUpon>Right.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Right.Master.designer.cs">
+      <DependentUpon>Right.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\TMS.Master.cs">
+      <DependentUpon>TMS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\TMS.Master.designer.cs">
+      <DependentUpon>TMS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Del.aspx.cs">
+      <DependentUpon>Del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Del.aspx.designer.cs">
+      <DependentUpon>Del.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Paper1.aspx.cs">
+      <DependentUpon>Paper1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Paper1.aspx.designer.cs">
+      <DependentUpon>Paper1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Paper1_admin.aspx.cs">
+      <DependentUpon>Paper1_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Paper1_admin.aspx.designer.cs">
+      <DependentUpon>Paper1_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Paper2.aspx.cs">
+      <DependentUpon>Paper2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Paper2.aspx.designer.cs">
+      <DependentUpon>Paper2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Paper2_admin.aspx.cs">
+      <DependentUpon>Paper2_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Paper2_admin.aspx.designer.cs">
+      <DependentUpon>Paper2_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Paper3.aspx.cs">
+      <DependentUpon>Paper3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Paper3.aspx.designer.cs">
+      <DependentUpon>Paper3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Paper3_admin.aspx.cs">
+      <DependentUpon>Paper3_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Paper3_admin.aspx.designer.cs">
+      <DependentUpon>Paper3_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Papers.aspx.cs">
+      <DependentUpon>Papers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Papers.aspx.designer.cs">
+      <DependentUpon>Papers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Radio.aspx.cs">
+      <DependentUpon>Radio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Radio.aspx.designer.cs">
+      <DependentUpon>Radio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperManagement\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperManagement\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperProduction\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperProduction\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperProduction\Add_test.aspx.cs">
+      <DependentUpon>Add_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperProduction\Add_test.aspx.designer.cs">
+      <DependentUpon>Add_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperProduction\Auto.aspx.cs">
+      <DependentUpon>Auto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperProduction\Auto.aspx.designer.cs">
+      <DependentUpon>Auto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaperProduction\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaperProduction\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultsManagement\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsManagement\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsManagement\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsManagement\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsManagement\Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsManagement\Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsManagement\Time.aspx.cs">
+      <DependentUpon>Time.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsManagement\Time.aspx.designer.cs">
+      <DependentUpon>Time.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsManagement\TMS_List.aspx.cs">
+      <DependentUpon>TMS_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsManagement\TMS_List.aspx.designer.cs">
+      <DependentUpon>TMS_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultsManagement\TMS_Students.aspx.cs">
+      <DependentUpon>TMS_Students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsManagement\TMS_Students.aspx.designer.cs">
+      <DependentUpon>TMS_Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\InsertDB.aspx.cs">
+      <DependentUpon>InsertDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\InsertDB.aspx.designer.cs">
+      <DependentUpon>InsertDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\InsertExam.aspx.cs">
+      <DependentUpon>InsertExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\InsertExam.aspx.designer.cs">
+      <DependentUpon>InsertExam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Setup1.aspx.cs">
+      <DependentUpon>Setup1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Setup1.aspx.designer.cs">
+      <DependentUpon>Setup1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Setup2.aspx.cs">
+      <DependentUpon>Setup2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Setup2.aspx.designer.cs">
+      <DependentUpon>Setup2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Setup3.aspx.cs">
+      <DependentUpon>Setup3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Setup3.aspx.designer.cs">
+      <DependentUpon>Setup3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Setup4.aspx.cs">
+      <DependentUpon>Setup4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\Setup4.aspx.designer.cs">
+      <DependentUpon>Setup4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmallWindows\CourseRadio.aspx.cs">
+      <DependentUpon>CourseRadio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmallWindows\CourseRadio.aspx.designer.cs">
+      <DependentUpon>CourseRadio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\ajax_CUstomerManage.ashx.cs">
+      <DependentUpon>ajax_CUstomerManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\GetTitleList_ajax.ashx.cs">
+      <DependentUpon>GetTitleList_ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\ReturnExamUrl.ashx.cs">
+      <DependentUpon>ReturnExamUrl.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{69164FDC-2BBA-4631-85AD-E6039DDCF396}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{D4FDAC38-8794-40F0-9FC3-07B4D18A751A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{7D746A3C-71C8-4777-8BB4-E36E81BA0C5B}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{D34D8760-72FF-4CFF-ABA5-974701E38586}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\admin.psd" />
+    <None Include="Images\setup.psd" />
+    <Content Include="Images\15.jpg" />
+    <Content Include="Images\23.jpg" />
+    <Content Include="Images\25.jpg" />
+    <Content Include="Images\folder.gif" />
+    <Content Include="Images\folders.gif" />
+    <Content Include="Images\PNG\application_side_contract.png" />
+    <Content Include="Images\PNG\application_side_expand.png" />
+    <Content Include="Images\PNG\application_side_list.png" />
+    <Content Include="Images\PNG\bullet_go.png" />
+    <Content Include="Images\PNG\contact_blue.png" />
+    <Content Include="Images\PNG\contact_grey.png" />
+    <Content Include="Images\PNG\folder.png" />
+    <Content Include="Images\PNG\folder_add.png" />
+    <Content Include="Images\PNG\folder_edit.png" />
+    <Content Include="Images\PNG\folder_go.png" />
+    <Content Include="Images\PNG\folder_modernist_opened_stuffed.png" />
+    <Content Include="Images\PNG\image_add.png" />
+    <Content Include="Images\PNG\image_edit.png" />
+    <Content Include="Images\PNG\okay_small.png" />
+    <Content Include="Images\PNG\page_white_edit.png" />
+    <Content Include="Images\PNG\report.png" />
+    <Content Include="Images\PNG\report_user.png" />
+    <Content Include="Images\PNG\table.png" />
+    <Content Include="Images\PNG\table_add.png" />
+    <Content Include="Images\PNG\table_delete.png" />
+    <Content Include="Images\PNG\table_edit.png" />
+    <Content Include="Images\PNG\table_go.png" />
+    <Content Include="Images\Search.gif" />
+    <Content Include="ItemBankManagement\TMS_Add.aspx" />
+    <Content Include="ItemBankManagement\TMS_Details.aspx" />
+    <Content Include="ItemBankManagement\TMS_List.aspx" />
+    <Content Include="Master\TMS.Master" />
+    <Content Include="JS\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="JS\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="JS\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="JS\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="JS\jquery-easyui\demo\accordion\datagrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\combobox\combobox_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\combobox\combobox_data2.json" />
+    <Content Include="JS\jquery-easyui\demo\combogrid\datagrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\combotree\tree_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\datagrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\datagrid_data2.json" />
+    <Content Include="JS\jquery-easyui\demo\datagrid\products.json" />
+    <Content Include="JS\jquery-easyui\demo\datalist\datalist_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\form\form_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\layout\datagrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\layout\propertygrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\layout\tree_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\propertygrid\propertygrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\tabs\tree_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\treegrid_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\treegrid_data2.json" />
+    <Content Include="JS\jquery-easyui\demo\treegrid\treegrid_data3.json" />
+    <Content Include="JS\jquery-easyui\demo\tree\tree_data1.json" />
+    <Content Include="JS\jquery-easyui\demo\tree\tree_data2.json" />
+    <None Include="Properties\PublishProfiles\Exam.pubxml" />
+    <None Include="Setup\Exam.sql" />
+    <None Include="Setup\TMS.sql" />
+    <Content Include="Admin\Div_Mid_Left.aspx" />
+    <Content Include="Admin\Div_Mid_Mid.aspx" />
+    <Content Include="Admin\Div_Mid_Right.aspx" />
+    <Content Include="Admin\Exchange.aspx" />
+    <Content Include="Admin\Index.aspx" />
+    <Content Include="Admin\Jump.aspx" />
+    <Content Include="CSS\Blinds.css" />
+    <Content Include="CSS\HrSys.css" />
+    <Content Include="Images\02.jpg" />
+    <Content Include="Images\03.jpg" />
+    <Content Include="Images\04.jpg" />
+    <Content Include="Images\05.jpg" />
+    <Content Include="Images\Add.jpg" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\Auto.jpg" />
+    <Content Include="Images\Back.jpg" />
+    <Content Include="Images\bg03.gif" />
+    <Content Include="Images\bg_h_19px.jpg" />
+    <Content Include="Images\Del.jpg" />
+    <Content Include="Images\end03.gif" />
+    <Content Include="Images\Lock_OFF.jpg" />
+    <Content Include="Images\Lock_ON.jpg" />
+    <Content Include="Images\logout.gif" />
+    <Content Include="Images\Right01.jpg" />
+    <Content Include="Images\Right02.jpg" />
+    <Content Include="Images\Save.jpg" />
+    <Content Include="Images\Set.jpg" />
+    <Content Include="Images\top03.gif" />
+    <Content Include="Images\Updata.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="ItemBankManagement\Add.aspx" />
+    <Content Include="ItemBankManagement\Details.aspx" />
+    <Content Include="ItemBankManagement\List.aspx" />
+    <Content Include="ItemBankManagement\Radio.aspx" />
+    <Content Include="ItemBankManagement\RadioValue.aspx" />
+    <Content Include="ItemBankManagement\RedioMore.aspx" />
+    <Content Include="ItemBankManagement\T_F.aspx" />
+    <Content Include="Master\Right.Master" />
+    <Content Include="mycustompage.htm" />
+    <Content Include="PaperManagement\Del.aspx" />
+    <Content Include="PaperManagement\Details.aspx" />
+    <Content Include="PaperManagement\List.aspx" />
+    <Content Include="PaperManagement\Papers.aspx" />
+    <Content Include="PaperManagement\Radio.aspx" />
+    <Content Include="PaperManagement\Test.aspx" />
+    <Content Include="PaperProduction\Add.aspx" />
+    <Content Include="PaperProduction\Auto.aspx" />
+    <Content Include="PaperProduction\Details.aspx" />
+    <Content Include="ResultsManagement\Details.aspx" />
+    <Content Include="ResultsManagement\List.aspx" />
+    <Content Include="ResultsManagement\Students.aspx" />
+    <Content Include="ResultsManagement\Time.aspx" />
+    <Content Include="ResultsManagement\TMS_List.aspx" />
+    <Content Include="ResultsManagement\TMS_Students.aspx" />
+    <Content Include="Setup\InsertDB.aspx" />
+    <Content Include="Setup\InsertExam.aspx" />
+    <Content Include="SmallWindows\CourseRadio.aspx" />
+    <Content Include="tools\GetTitleList_ajax.ashx" />
+    <Content Include="tools\ajax_CUstomerManage.ashx" />
+    <Content Include="tools\ReturnExamUrl.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2599</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

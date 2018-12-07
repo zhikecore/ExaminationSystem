@@ -1,0 +1,365 @@
+﻿body {
+    background: #fff;
+}
+
+* {
+    font-family: 'Microsoft YaHei';
+    list-style: none;
+}
+
+.nav-pills > li {
+    border: 1px solid #ccc;
+    border-left: none;
+    background: -ms-linear-gradient(bottom, #f2f9fc, #ffffff); /* IE 10 */
+    background: -moz-linear-gradient(bottom, #f2f9fc,#ffffff); /*火狐*/
+    background: -webkit-linear-gradient(bottom, #f2f9fc, #ffffff); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(bottom, #f2f9fc, #ffffff); /*Opera 11.10+*/
+}
+
+.nav-pills > li {
+    border-left: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+    .nav-pills > li > a {
+        border-radius: 0;
+        color: #000;
+        font-weight: bold;
+    }
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background: -ms-linear-gradient(bottom, #f2f9fc, #ffffff); /* IE 10 */
+    background: -moz-linear-gradient(bottom, #f2f9fc,#ffffff); /*火狐*/
+    background: -webkit-linear-gradient(bottom, #f2f9fc, #ffffff); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(bottom, #f2f9fc, #ffffff); /*Opera 11.10+*/
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background: #3bb9ef;
+}
+
+.tab-content {
+    background: #fff;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.personal_diagnosis_header {
+    background: #3bb9ef;
+    color: #fff;
+    padding: 10px;
+    padding-bottom: 30px;
+    display: none;
+}
+
+.personal_header_detail {
+    width: 1000px;
+    margin: auto;
+}
+
+.survey_header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.survey_header2, .survey_header3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.survey_table {
+    background: #7ed1f5;
+    width: 1000px;
+    margin: auto;
+    -webkit-box-shadow: 0 0 10px 10px rgba(255, 255, 255, .2);
+    -moz-box-shadow: 0 0 10px 10px rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, .2);
+    margin-top: 30px;
+}
+
+    .survey_table td {
+        border-color: #cbedfb !important;
+        padding-left: 30px !important;
+        font-weight: bold;
+    }
+
+.survey_content > div {
+    display: none;
+    padding: 10px;
+}
+
+.survey_footer {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.survey_content > div:first-child {
+    display: block;
+}
+
+.tab-all {
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    bottom: -10px;
+}
+
+    .tab-all > li {
+        float: left;
+        height: 30px;
+        width: 30px;
+        background: #f3f3f3;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+.tab-all1 {
+    overflow: hidden;
+    position: absolute;
+    right: 20px;
+    bottom: -10px;
+}
+
+    .tab-all1 > li {
+        float: left;
+        height: 30px;
+        width: 30px;
+        background: #f3f3f3;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+.my_submit {
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    background: #3bb9ef;
+    color: #fff;
+    margin: auto;
+}
+
+.survey_one {
+    width: 1000px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.survey_content > div h4 {
+    font-weight: bold;
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.survey_one p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.order_head {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: #f3f3f3;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.company_radio {
+    margin-left: 10px;
+}
+
+    .company_radio > img {
+        height: 15px;
+        width: auto;
+        position: relative;
+        top: -1px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+.survey_select {
+    padding-left: 25px;
+    overflow: hidden;
+}
+
+    .survey_select > textarea {
+        width: 600px;
+        height: 150px;
+        padding: 10px;
+        resize: none;
+    }
+
+#personal_examine .survey_header2 {
+    font-size: 22px;
+}
+
+.survey_demand {
+    background: #7ed1f5;
+    width: 1000px;
+    margin: auto;
+    padding: 20px 30px;
+    -webkit-box-shadow: 0 0 10px 10px rgba(255, 255, 255, .2);
+    -moz-box-shadow: 0 0 10px 10px rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, .2);
+    margin-top: 30px;
+}
+
+.survey_table_head {
+    height: 40px;
+    width: 1000px;
+    margin: auto;
+    line-height: 40px;
+    text-align: center;
+    background: -ms-linear-gradient(bottom, #f2f9fc, #ffffff); /* IE 10 */
+    background: -moz-linear-gradient(bottom, #f2f9fc,#ffffff); /*火狐*/
+    background: -webkit-linear-gradient(bottom, #f2f9fc, #ffffff); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(bottom, #f2f9fc, #ffffff); /*Opera 11.10+*/
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.survey_mytable {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+    .survey_mytable td {
+        height: 37px;
+        vertical-align: middle !important;
+        padding: 0 !important;
+    }
+
+        .survey_mytable td .form-control {
+            border: none;
+            outline: none;
+        }
+
+        .survey_mytable td:nth-child(odd) {
+            width: 150px;
+            text-align: center;
+            background: -ms-linear-gradient(bottom, #f2f9fc, #ffffff); /* IE 10 */
+            background: -moz-linear-gradient(bottom, #f2f9fc,#ffffff); /*火狐*/
+            background: -webkit-linear-gradient(bottom, #f2f9fc, #ffffff); /*Safari5.1 Chrome 10+*/
+            background: -o-linear-gradient(bottom, #f2f9fc, #ffffff); /*Opera 11.10+*/
+        }
+
+        .survey_mytable td:nth-child(even) {
+            width: 350px;
+        }
+
+.specail_Td {
+    height: 80px !important;
+}
+
+    .specail_Td > textarea {
+        display: block;
+        height: 80px;
+        width: 100%;
+        border: none;
+        outline: none;
+        resize: none;
+    }
+
+.specail_Tr {
+    background: -ms-linear-gradient(bottom, #f2f9fc, #ffffff); /* IE 10 */
+    background: -moz-linear-gradient(bottom, #f2f9fc,#ffffff); /*火狐*/
+    background: -webkit-linear-gradient(bottom, #f2f9fc, #ffffff); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(bottom, #f2f9fc, #ffffff); /*Opera 11.10+*/
+}
+
+.my_specTd {
+    background: #fff !important;
+}
+
+.specail_span {
+    display: block;
+    float: left;
+    height: 37px;
+    width: 440px;
+    border-left: 1px solid #ddd;
+    padding-top: 5px;
+}
+
+.my_specTd > .specail_span:first-child {
+    border-left: none;
+}
+
+.specil_background {
+    background: #fff !important;
+}
+
+.specil_input {
+    width: 50px !important;
+    border: none;
+    height: 25px !important;
+    border-bottom: 1px solid #ccc !important;
+    box-shadow: none;
+    outline: none;
+    text-align: center;
+}
+
+.my_line {
+    display: block;
+    float: left;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+    .my_line > img {
+        height: 15px;
+        width: auto;
+        position: relative;
+        top: -1px;
+        cursor: pointer;
+    }
+
+.more_select {
+    padding-left: 35px;
+}
+
+.it_select {
+    width: 200px !important;
+    border: none;
+    height: 25px !important;
+    border-bottom: 1px solid #ccc !important;
+    box-shadow: none;
+    outline: none;
+    visibility: hidden;
+}
+
+.bbs_pull_down {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    padding-top: 8px;
+    position: relative;
+    cursor: pointer;
+    color: #a6a6a6;
+    box-shadow: 0 0 0 #ccc, /*左边阴影*/
+    0 0 0 #ccc, /*右边阴影*/
+    0 0 0 #ccc, /*顶部阴影*/
+    0 1px 1px #ccc;
+}

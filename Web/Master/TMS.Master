@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TMS.master.cs" Inherits="Web.Master.TMS" %>
+
+<%@ Register TagPrefix="skm" Namespace="Common" Assembly="Common" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <script type="text/javascript">
+        var tt = "dialogHeight:500px;dialogWidth:700px,toolbar =no, menubar=no, scrollbars=no, resizable=yes, location=no, status=no";
+        function Course() {
+            var name = document.getElementById("ctl00_tb_Name");
+            var v = showModalDialog('/SmallWindows/CourseRadio.aspx', "newwindow", tt);
+
+            if (v == null) {
+                return;
+            }
+            else {
+                name.value = v;
+            }
+        }
+    </script>
+
+    <link href="../CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <skm:Form ID="Form1" method="post" runat="server">
+        <div class="table_Master">
+            <table style="width: 99%" border="0" cellpadding="3" cellspacing="3">
+                <tr style="height: 26px">
+                    <td class="title_14px" style="height: 70px; width: 50%" align="center">
+                        <asp:ContentPlaceHolder ID="Title" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td style="width: 50%">
+                        <asp:ContentPlaceHolder ID="Button" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #3768BB; height: 1px" colspan="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text_12px">
+                        请选择课程：
+                        <input id="tb_Name" readonly="readonly" runat="server" type="text" value="0" />
+                        <img alt="选择" src="../Images/25.jpg" border="0" onclick="Course()" style="cursor: hand" />
+                        <asp:ImageButton ID="imgbt_Search" ImageUrl="~/Images/Search.gif" runat="server"
+                            OnClick="imgbt_Search_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </skm:Form>
+</body>
+</html>

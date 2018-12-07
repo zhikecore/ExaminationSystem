@@ -1,0 +1,38 @@
+﻿.A_body
+{
+    background-color:#EFEFEF;
+}
+.A_td
+{
+    background-color:#EFEFEF;
+}
+
+.A_table
+{
+    border-right: #777697 1px solid;
+    border-top: #777697 1px solid;
+    border-left: #777697 1px solid;
+    border-bottom: #777697 1px solid;
+    font-size:12px;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+.Img_top
+{
+    background-image:url(../Images/top03.gif);
+}
+.Img_end
+{
+    background-image:url(../Images/end03.gif);
+}
+.Img_bg
+{
+    background-image:url(../Images/bg03.gif);
+    font-size: 13px;
+    vertical-align: middle;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    font-family:微软雅黑;
+    /*font-family: 仿体;*/
+    font-weight:bold;
+}

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+    //获得参数的方法
+    var request =
+    {
+        QueryString: function(val) 
+            {
+                var uri = window.location.search;
+                var re = new RegExp("" + val + "=([^&?]*)", "ig");
+                return ((uri.match(re)) ? (uri.match(re)[0].substr(val.length + 1)) : null);
+            }
+    } 
+
+</script>
+
+</head>
+<body>
+<script type="text/javascript">
+    //调用方法获得参数
+    var rt = request.QueryString("Str");
+    document.write(rt);
+</script>
+<br />
+Failure
+</body>
+</html>
+

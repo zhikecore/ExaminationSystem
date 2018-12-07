@@ -1,0 +1,47 @@
+﻿.menu_title
+    {
+        /*background:#FFFFFF;*/
+        background-image:url(/Images/03.jpg);
+        border-right: #6A9DCB 1px solid;
+        border-left: #6A9DCB 1px solid;
+        border-top: #6A9DCB 1px solid;
+        border-bottom: #6A9DCB 1px solid;
+        font-size:12px;
+        color:#003366;
+        width:10%;
+    }
+    .menu_title_on{
+        /*background:#EBEFF7;*/
+        background-image:url(/Images/02.jpg);
+        border-right: #6A9DCB 1px solid;
+        border-left: #6A9DCB 1px solid;
+        font-size:12px;
+        color:#003366;
+        border-top: #6A9DCB 1px solid;
+        width:10%;
+    }
+    .my_left{
+        border-top: #6A9DCB 1px solid;
+        border-left: #6A9DCB 1px solid;
+        border-bottom: #6A9DCB 1px solid;
+        font-size:12px;
+    }
+    .my_right{
+        /*border-right: #6A9DCB 1px solid;
+        border-top: #6A9DCB 1px solid;*/
+        border-bottom: #6A9DCB 1px solid;
+        font-size:12px;
+    }
+    .my_mid{
+        /*border-top: #6A9DCB 1px solid;*/
+        border-bottom: #6A9DCB 1px solid;
+        font-size:12px;
+        width:1%;
+    }
+    .table_Box1
+    {
+        border-right: #6A9DCB 1px solid;
+        border-left: #6A9DCB 1px solid;
+        border-bottom: #6A9DCB 1px solid;
+        font-size:12px;
+}
