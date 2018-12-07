@@ -1277,6 +1277,7 @@
     <Content Include="JS\jquery-easyui\demo\tree\tree_data1.json" />
     <Content Include="JS\jquery-easyui\demo\tree\tree_data2.json" />
     <None Include="Properties\PublishProfiles\Exam.pubxml" />
+    <None Include="Properties\PublishProfiles\ExaminationSystem.pubxml" />
     <None Include="Setup\Exam.sql" />
     <None Include="Setup\TMS.sql" />
     <Content Include="Admin\Div_Mid_Left.aspx" />
